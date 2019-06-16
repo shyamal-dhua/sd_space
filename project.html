@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<title>Shyamal - Projects
+</title>
+<head>
+<link type="text/css" rel="stylesheet" href="project.css" />
+</head>
+<body>
+<script>
+function changeImage(id_sent,description_id_sent)
+{
+var element=document.getElementsByClassName("arrow");
+var id_count=parseInt(id_sent) - 1;
+var description_element = document.getElementById(description_id_sent);
+//document.write(description_element)
+
+if(element[id_count].src.match("up"))
+  {
+  element[id_count].src="down_arrow.png";
+	description_element.style.display = 'none';	
+  }
+else
+  {
+  element[id_count].src="up_arrow.png";
+	description_element.style.display = 'table-cell';	
+  }
+}
+</script>
+
+<div class="slider-content slider-display-container">
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a class="active" href="project.html">Projects</a></li>
+  <li><a href="research.html">Research</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+
+<br>
+<div style="background-color: 'white';">
+<table cellspacing="1px" border="4px" bordercolor="white" style="max-width:960px; margin:auto; position:relative; background-color: white; width: 960px;">
+	<col style="width: 30px; background-color: #2ba6cb;">
+  <col style="width: 930px; background-color: #2ba6cb;">
+	<tr>
+	<td valign="middle"><input type="image" class="arrow" id="1" onclick="changeImage(1,'project_description_1')" src="down_arrow.png" style="width: 24px; height: 24px;"/></td> 	
+	<td valign="middle"><a href="https://github.com/shyamal-dhua/D2D" title="checkout the code in GitHub" style="text-decoration:none;" target="_blank"><font color="white" size="2px">Resource Allocation and Interference Cancellation in D2D Communication</font></a>
+</td>   
+	</tr>
+
+	<tr>
+  <td id="project_description_1" colspan = "2" style="background-color: white; display: none;">
+	<p><font size="2px">
+	Device to Device communication on top of the existing LTE cellular network, as a requirement in
+	5G, was implemented in such a way that the interference to existing cell users communicating
+	via Base stations is kept to a minimum.
+	<br><br>Carrier-by-carrier in turn algorithm was used for allocating resource blocks to cell users and
+	Bipartite graph based allocation technique was used for the D2D users.
+	<br><br>The technique used resulted in a significant increase in system throughput.
+	<br><br>Backend for the project was coded in Python 3.6.2.
+	</font></p>	
+	</td>
+  </tr>
+
+	<tr>
+	<td valign="middle"><input type="image" class="arrow" id="2" onclick="changeImage(2,'project_description_2')" src="down_arrow.png" style="width: 24px; height: 24px;"/></td> 	
+	<td valign="middle"><a href="https://github.com/shyamal-dhua/basic-image-editor" title="checkout the code in GitHub" style="text-decoration:none;" target="_blank"><font color="white" size="2px"> Basic Image Editor</font></a>   
+	</tr>
+	
+	<tr>
+  <td id="project_description_2" colspan = "2" style="background-color: white; display: none;">
+	<p><font size="2px">
+	Basic image editor GUI for extracting information from images and improving image
+	quality using some image transformations.
+	<br><br>Backend for the project was coded in Python 3.6.2.
+	</font></p>	
+	</td>
+  </tr>
+
+
+</table>
+</div>
+
+</body>
+</html>
+
