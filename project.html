@@ -3,6 +3,8 @@
 <title>Shyamal - Projects
 </title>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link type="text/css" rel="stylesheet" href="project.css" />
 </head>
 <body>
@@ -17,17 +19,43 @@ var description_element = document.getElementById(description_id_sent);
 if(element[id_count].src.match("up"))
   {
   element[id_count].src="down_arrow.png";
-	description_element.style.display = 'none';	
+	description_element.style.display = 'none';
   }
 else
   {
   element[id_count].src="up_arrow.png";
-	description_element.style.display = 'table-cell';	
+	description_element.style.display = 'table-cell';
+  }
+}
+
+function changeImage2(id_sent)
+{
+var i;
+var element=document.getElementsByClassName("arrow2");
+var id_count=parseInt(id_sent) - 1;
+var other_pages = document.getElementsByClassName("myPages");
+//document.write(description_element)
+
+if(element[id_count].src.match("up"))
+  {
+  element[id_count].src="down_arrow.png";
+
+  for (i = 0; i < other_pages.length; i++) {
+     other_pages[i].style.display = "none";
+  }
+  }
+else
+  {
+  element[id_count].src="up_arrow.png";
+
+  for (i = 0; i < other_pages.length; i++) {
+     other_pages[i].style.display = 'table-cell';
+  }
   }
 }
 </script>
 
-<div class="slider-content slider-display-container">
+<div class="desktop slider-content slider-display-container">
 <ul>
   <li><a href="index.html">Home</a></li>
   <li><a class="active" href="project.html">Projects</a></li>
@@ -36,15 +64,42 @@ else
 </ul>
 </div>
 
+<div class="mobile" style="background-color: 'white';">
+  <table cellspacing="1px" style="width:100%; margin:auto; background-color: white;">
+    <col style="width:90%; background-color: #2ba6cb;">
+    <col style="width:10%; background-color: #2ba6cb;">
+  	<tr>
+  	<td valign="middle"><a href="project.html" style="text-decoration:none; padding-left: 5px;"><font color=#000 size="2px">Projects</font></a>
+    </td>
+    <td align="center"><input type="image" class="arrow2" id="1" onclick="changeImage2(1)" src="down_arrow.png" style="width: 24px; height: 24px; margin:auto;"/></td>
+  	</tr>
+    <tr>
+    <td class="myPages" valign="middle" colspan = "2" style="display: none; height: 24px;">
+        <a href="index.html" style="text-decoration:none; padding-left: 5px;"><font color=#000 size="2px">Home</font></a>
+  	</td>
+    </tr>
+    <tr>
+    <td class="myPages" valign="middle" colspan = "2" style="display: none; height: 24px;">
+        <a href="research.html" style="text-decoration:none; padding-left: 5px;"><font color=#000 size="2px">Research</font></a>
+  	</td>
+    </tr>
+    <tr>
+    <td class="myPages" valign="middle" colspan = "2" style="display: none; height: 24px;">
+        <a href="contact.html" style="text-decoration:none; padding-left: 5px;"><font color=#000 size="2px">Contact</font></a>
+  	</td>
+    </tr>
+  </table>
+</div>
+
 <br>
 <div style="background-color: 'white';">
-<table cellspacing="1px" border="4px" bordercolor="white" style="max-width:960px; margin:auto; position:relative; background-color: white; width: 960px;">
+<table cellspacing="1px" border="4px" bordercolor=#cccccc class="table_spec">
 	<col style="width: 30px; background-color: #2ba6cb;">
   <col style="width: 930px; background-color: #2ba6cb;">
 	<tr>
-	<td valign="middle"><input type="image" class="arrow" id="1" onclick="changeImage(1,'project_description_1')" src="down_arrow.png" style="width: 24px; height: 24px;"/></td> 	
+	<td valign="middle"><input type="image" class="arrow" id="1" onclick="changeImage(1,'project_description_1')" src="down_arrow.png" style="width: 24px; height: 24px;"/></td>
 	<td valign="middle"><a href="https://github.com/shyamal-dhua/D2D" title="checkout the code in GitHub" style="text-decoration:none;" target="_blank"><font color="white" size="2px">Resource Allocation and Interference Cancellation in D2D Communication</font></a>
-</td>   
+</td>
 	</tr>
 
 	<tr>
@@ -57,29 +112,27 @@ else
 	Bipartite graph based allocation technique was used for the D2D users.
 	<br><br>The technique used resulted in a significant increase in system throughput.
 	<br><br>Backend for the project was coded in Python 3.6.2.
-	</font></p>	
+	</font></p>
 	</td>
   </tr>
 
 	<tr>
-	<td valign="middle"><input type="image" class="arrow" id="2" onclick="changeImage(2,'project_description_2')" src="down_arrow.png" style="width: 24px; height: 24px;"/></td> 	
-	<td valign="middle"><a href="https://github.com/shyamal-dhua/basic-image-editor" title="checkout the code in GitHub" style="text-decoration:none;" target="_blank"><font color="white" size="2px"> Basic Image Editor</font></a>   
+	<td valign="middle"><input type="image" class="arrow" id="2" onclick="changeImage(2,'project_description_2')" src="down_arrow.png" style="width: 24px; height: 24px;"/></td>
+	<td valign="middle"><a href="https://github.com/shyamal-dhua/basic-image-editor" title="checkout the code in GitHub" style="text-decoration:none;" target="_blank"><font color="white" size="2px"> Basic Image Editor</font></a>
 	</tr>
-	
+
 	<tr>
   <td id="project_description_2" colspan = "2" style="background-color: white; display: none;">
 	<p><font size="2px">
 	Basic image editor GUI for extracting information from images and improving image
 	quality using some image transformations.
 	<br><br>Backend for the project was coded in Python 3.6.2.
-	</font></p>	
+	</font></p>
 	</td>
   </tr>
-
 
 </table>
 </div>
 
 </body>
 </html>
-

@@ -3,11 +3,40 @@
 <title>Shyamal - Research
 </title>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link type="text/css" rel="stylesheet" href="research.css" />
 </head>
 <body>
+<script>
+function changeImage(id_sent)
+{
+var i;
+var element=document.getElementsByClassName("arrow");
+var id_count=parseInt(id_sent) - 1;
+var other_pages = document.getElementsByClassName("myPages");
+//document.write(description_element)
 
-<div class="slider-content slider-display-container">
+if(element[id_count].src.match("up"))
+  {
+  element[id_count].src="down_arrow.png";
+
+  for (i = 0; i < other_pages.length; i++) {
+     other_pages[i].style.display = "none";
+  }
+  }
+else
+  {
+  element[id_count].src="up_arrow.png";
+
+  for (i = 0; i < other_pages.length; i++) {
+     other_pages[i].style.display = 'table-cell';
+  }
+  }
+}
+</script>
+
+<div class="desktop slider-content slider-display-container">
 <ul>
   <li><a href="index.html">Home</a></li>
   <li><a href="project.html">Projects</a></li>
@@ -16,11 +45,43 @@
 </ul>
 </div>
 
-<div class="slider-content slider-display-container box_2">	
+<div class="mobile" style="background-color: 'white';">
+  <table cellspacing="1px" style="width:100%; margin:auto; background-color: white;">
+    <col style="width:90%; background-color: #2ba6cb;">
+    <col style="width:10%; background-color: #2ba6cb;">
+  	<tr>
+  	<td valign="middle"><a href="research.html" style="text-decoration:none; padding-left: 5px;"><font color=#000 size="2px">Research</font></a>
+    </td>
+    <td align="center"><input type="image" class="arrow" id="1" onclick="changeImage(1)" src="down_arrow.png" style="width: 24px; height: 24px; margin:auto;"/></td>
+  	</tr>
+    <tr>
+    <td class="myPages" valign="middle" colspan = "2" style="display: none; height: 24px;">
+        <a href="index.html" style="text-decoration:none; padding-left: 5px;"><font color=#000 size="2px">Home</font></a>
+  	</td>
+    </tr>
+    <tr>
+    <td class="myPages" valign="middle" colspan = "2" style="display: none; height: 24px;">
+        <a href="project.html" style="text-decoration:none; padding-left: 5px;"><font color=#000 size="2px">Projects</font></a>
+  	</td>
+    </tr>
+    <tr>
+    <td class="myPages" valign="middle" colspan = "2" style="display: none; height: 24px;">
+        <a href="contact.html" style="text-decoration:none; padding-left: 5px;"><font color=#000 size="2px">Contact</font></a>
+  	</td>
+    </tr>
+  </table>
+</div>
+
+<div class="box_2">
 	<p> <font size="2px"> No significant contribution yet ....
 	</font></p>
+  <!--
+  <p> <font size="2px"> Below are my research contributions ....
+	<br><br>Paper Title 1 <a href="paper_link" style="text-decoration:none;" target="_blank">[Link]</a>
+  <br><br>Paper Title 2 <a href="paper_link" style="text-decoration:none;" target="_blank">[Link]</a>
+  </font></p>
+  -->
 </div>
 
 </body>
 </html>
-

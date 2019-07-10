@@ -4,10 +4,11 @@
 </title>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link type="text/css" rel="stylesheet" href="home.css" />
 </head>
 <body>
-<div class="slider-content slider-display-container">
+<div class="desktop slider-content slider-display-container">
 <ul>
   <li><a class="active" href="index.html">Home</a></li>
   <li><a href="project.html">Projects</a></li>
@@ -16,12 +17,39 @@
 </ul>
 </div>
 
-<div class="slider-content slider-display-container box_1" id="slider_id_1" style="background-color: black">
+<div class="mobile" style="background-color: 'white';">
+  <table cellspacing="1px" style="width:100%; margin:auto; background-color: white;">
+    <col style="width:90%; background-color: #2ba6cb;">
+    <col style="width:10%; background-color: #2ba6cb;">
+  	<tr>
+  	<td valign="middle"><a href="index.html" style="text-decoration:none; padding-left: 5px;"><font color=#000 size="2px">Home</font></a>
+    </td>
+    <td align="center"><input type="image" class="arrow" id="1" onclick="changeImage(1)" src="down_arrow.png" style="width: 24px; height: 24px; margin:auto;"/></td>
+  	</tr>
+    <tr>
+    <td class="myPages" valign="middle" colspan = "2" style="display: none; height: 24px;">
+        <a href="project.html" style="text-decoration:none; padding-left: 5px;"><font color=#000 size="2px">Projects</font></a>
+  	</td>
+    </tr>
+    <tr>
+    <td class="myPages" valign="middle" colspan = "2" style="display: none; height: 24px;">
+        <a href="research.html" style="text-decoration:none; padding-left: 5px;"><font color=#000 size="2px">Research</font></a>
+  	</td>
+    </tr>
+    <tr>
+    <td class="myPages" valign="middle" colspan = "2" style="display: none; height: 24px;">
+        <a href="contact.html" style="text-decoration:none; padding-left: 5px;"><font color=#000 size="2px">Contact</font></a>
+  	</td>
+    </tr>
+  </table>
+</div>
+
+<div class="desktop slider-content slider-display-container box_1" id="slider_id_1">
 <font color="white" id="fading_text_id" style="opacity: 1;"><center><br><br><br><br><h2>You should enjoy the little detours to the fullest. Because that's where you'll find the things more important than what you want.</h2></center></font>
 </div>
 
-<div class="slider-content slider-display-container hide" id="slider_id_2">
-  
+<div class="desktop slider-content slider-display-container hide" id="slider_id_2">
+
 	<div class="slider-display-container mySlides">
   <img src="image_slider_images/powai_lake.jpg" style="width: 960px; height: 330px;" width="960" height="330">
   <div class="slider-display-bottomright slider-large slider-container slider-padding-16 slider-black">
@@ -35,49 +63,57 @@
     Sameer hill view, IIT Bombay
   </div>
   </div>
-	
+
 	<div class="slider-display-container mySlides">
   <img src="image_slider_images/infi_corridor.jpg" style="width: 960px; height: 330px;" width="960" height="330">
   <div class="slider-display-bottomright slider-large slider-container slider-padding-16 slider-black">
     Infi corridor, IIT Bombay
   </div>
   </div>
-	
+
 	<div class="slider-display-container mySlides">
   <img src="image_slider_images/red_yellow.png" style="width: 960px; height: 330px;" width="960" height="330">
   <div class="slider-display-bottomright slider-large slider-container slider-padding-16 slider-black">
     One side red and other yellow, outside IIT Bombay
   </div>
   </div>
-	
+
   <button class="slider-button slider-black slider-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="slider-button slider-black slider-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
 
-<div class="slider-content slider-display-container box_3">
-		
-		<!--<img src="shyamal_pic.jpg" width=150px height=150px style="float: left; margin-right: 10px; margin-bottom: 5px; 
-							border: 1px solid #ccc; padding: 2px 2px"> -->
-		
-		<a href="//linkedin.com/in/shyamal-dhua-5b42b070" title="connect with me on LinkedIn" style="text-decoration:none; position: absolute; top: 0px; right: 0px;" target="_blank"><img src="linked_in_icon.png" style="width: 24px; height: 24px;"/></a>	
-		
-<p><img src="shyamal_pic.jpg" width=128px height=215px style="float: left; margin-right: 10px; margin-bottom: 5px;border: 1px solid #ccc; padding: 2px 2px;"><font size="2px">HI!!!! I am Shyamal. Welcome to my homepage. I have put some information on me and my work here. If you happen to share some of my interests, academic or otherwise, I'd be more than happy to talk about them.
-<br><br>I am a graduate in Electronics Engineering. Currently I am pursuing my MTech in Communications and Signal Processing from IIT Bombay. 
-My research interests include Wireless communication, Digital Signal Processing, Machine Learning, Software Development and Embedded System Design. 
-<br><br>An Engineer, for me, means a person who is able to solve any problem as fast as possible, regardless of it being their trade work or some other completely different field. In these terms, can't say I am much of an engineer myself, because though I can find solutions but I often find myself fighting against time. But, learning new things is always interesting by itself. 
-I like coding during my free time. Apart from this I am a foodie <img src="hungry.png" width=20px height=20px> and like to go to new food places with my friends. P.S. Before leaving do click on the monkey you find on top left corner for notifications.      
-</font>    
-</p>
+<div class="desktop slider-content slider-display-container box_3">
+  <a href="//linkedin.com/in/shyamal-dhua-5b42b070" title="connect with me on LinkedIn" style="text-decoration:none; position: absolute; top: 0px; right: 0px;" target="_blank"><img src="linked_in_icon.png" style="width: 24px; height: 24px;"/></a>
 
+  <p><img src="shyamal_pic.jpg" width=128px height=215px style="float: left; margin-right: 10px; margin-bottom: 5px;border: 1px solid #ccc; padding: 2px 2px;"><font size="2px">HI!!!! I am Shyamal. Welcome to my homepage. I have put some information on me and my work here. If you happen to share some of my interests, academic or otherwise, I'd be more than happy to talk about them.
+  <br><br>I am a graduate in Electronics Engineering. Currently I am pursuing my MTech in Communications and Signal Processing from IIT Bombay.
+  My research interests include Wireless communication, Digital Signal Processing, Machine Learning, Software Development and Embedded System Design.
+  <br><br>An Engineer, for me, means a person who is able to solve any problem as fast as possible, regardless of it being their trade work or some other completely different field. In these terms, can't say I am much of an engineer myself, because though I can find solutions but I often find myself fighting against time. But, learning new things is always interesting by itself.
+  I like coding during my free time. Apart from this I am a foodie <img src="hungry.png" width=20px height=20px> and like to go to new food places with my friends. P.S. Before leaving do click on the monkey you find on top left corner for notifications.
+  </font>
+  </p>
 </div>
 
-<div>
+<div class="mobile box_3" style="min-height: 272px">
+  <a href="//linkedin.com/in/shyamal-dhua-5b42b070" title="connect with me on LinkedIn" style="text-decoration:none; position: absolute; top: 0px; right: 0px;" target="_blank"><img src="linked_in_icon.png" style="width: 24px; height: 24px;"/></a>
+
+  <p><img src="shyamal_pic.jpg" width=128px height=215px style="float: left; margin-right: 10px; margin-bottom: 5px;border: 1px solid #ccc; padding: 2px 2px;"><font size="2px">HI!!!! I am Shyamal. Welcome to my homepage. I have put some information on me and my work here. If you happen to share some of my interests, academic or otherwise, I'd be more than happy to talk about them.
+  I am a graduate in Electronics Engineering. Currently I am pursuing my MTech in Communications and Signal Processing from IIT Bombay.
+  My research interests include Wireless communication, Digital Signal Processing, Machine Learning, Software Development and Embedded System Design.
+  <br><br>An Engineer, for me, means a person who is able to solve any problem as fast as possible, regardless of it being their trade work or some other completely different field. In these terms, can't say I am much of an engineer myself, because though I can find solutions but I often find myself fighting against time. But, learning new things is always interesting by itself.
+  I like coding during my free time. Apart from this I am a foodie <img src="hungry.png" width=20px height=20px> and like to go to new food places with my friends.
+  </font>
+  </p>
+</div>
+
+<div class="desktop">
 <img src="monkey.jpg" id="monkey_id" onmouseover="hover()" onmouseout="unhover()" onclick="monkey_notify()" style="width: 150px; height: 170px; position: absolute; top: -120px; left: 0px;"/>
 </div>
 
 <script>
 var slideIndex = 1;
 var i=4;
+var count = 1;
 
 /*
 if(document.URL.indexOf("#")==-1)
@@ -91,36 +127,18 @@ if(document.URL.indexOf("#")==-1)
 
 }
 */
-setTimeout(function() {
-document.getElementById('fading_text_id').style["opacity"] = 0.9; 
-}, 200*i);
-setTimeout(function() {
-document.getElementById('fading_text_id').style["opacity"] = 0.8; 
-}, 400*i);
-setTimeout(function() {
-document.getElementById('fading_text_id').style["opacity"] = 0.7; 
-}, 600*i);
-setTimeout(function() {
-document.getElementById('fading_text_id').style["opacity"] = 0.6; 
-}, 800*i);
-setTimeout(function() {
-document.getElementById('fading_text_id').style["opacity"] = 0.5; 
-}, 1000*i);
-setTimeout(function() {
-document.getElementById('fading_text_id').style["opacity"] = 0.4; 
-}, 1200*i);
-setTimeout(function() {
-document.getElementById('fading_text_id').style["opacity"] = 0.3; 
-}, 1400*i);
-setTimeout(function() {
-document.getElementById('fading_text_id').style["opacity"] = 0.2; 
-}, 1600*i);
-setTimeout(function() {
-document.getElementById('fading_text_id').style["opacity"] = 0.1; 
-}, 1800*i);
-setTimeout(function() {
-document.getElementById('fading_text_id').style["opacity"] = 0; 
-}, 2000*i);
+
+function opacity_change()
+{
+  document.getElementById('fading_text_id').style["opacity"] = 1-(0.1*count);
+  count = count + 1;
+  if(count < 11)
+  {
+    setTimeout(opacity_change, 200*i);
+  }
+}
+
+setTimeout(opacity_change, 200*i);
 
 setTimeout(function() {
 var element = document.getElementById("slider_id_1");
@@ -136,12 +154,12 @@ function plusDivs(n) {
 function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
+  if (n > x.length) {slideIndex = 1}
   if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
+     x[i].style.display = "none";
   }
-  x[slideIndex-1].style.display = "block";  
+  x[slideIndex-1].style.display = "block";
 }
 
 function hover() {
@@ -156,11 +174,35 @@ function unhover() {
 function monkey_notify()
 {
 //alert("notification line1\nnotification line2");
-alert("Download the Talent Battle App from Playstore \n\n Create your quiz and challenge your friends\n Prepare for competitive exams \n Learn while having fun and best of all earn real money \n\n Some of my friends have made this really cool trivia app \n Do test it and share your reviews");
-//alert("No notifications currently ....");
+alert("No notifications currently ....");
+}
+
+function changeImage(id_sent)
+{
+var i;
+var element=document.getElementsByClassName("arrow");
+var id_count=parseInt(id_sent) - 1;
+var other_pages = document.getElementsByClassName("myPages");
+//document.write(description_element)
+
+if(element[id_count].src.match("up"))
+  {
+  element[id_count].src="down_arrow.png";
+
+  for (i = 0; i < other_pages.length; i++) {
+     other_pages[i].style.display = "none";
+  }
+  }
+else
+  {
+  element[id_count].src="up_arrow.png";
+
+  for (i = 0; i < other_pages.length; i++) {
+     other_pages[i].style.display = 'table-cell';
+  }
+  }
 }
 </script>
 
 </body>
 </html>
-
